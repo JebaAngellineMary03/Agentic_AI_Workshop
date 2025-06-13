@@ -1,18 +1,17 @@
 # 🧠 AI Research Assistant – RAG-based QA on Academic PDFs
 
-This project is an AI-powered **Question Answering System** built using the **Retrieval-Augmented Generation (RAG)** approach. It allows you to upload or preload academic PDFs, ask questions about them, and get precise, source-cited answers using OpenAI and FAISS vector search.
+This project is an AI-powered **Question Answering System** built using the **Retrieval-Augmented Generation (RAG)** approach. It allows you to preload academic PDFs, ask questions about them, and get precise, source-cited answers using OpenAI and FAISS vector search.
 
 ---
 
 ## 🚀 Features
 
 - 🔍 **Ask questions** from academic PDFs
-- 📄 Upload custom PDF files (or preload them in bulk)
+- 📄 Preload custom pdfs in bulk
 - 🧠 Uses **LangChain** chunking and **SBERT** for embedding
 - ⚡ **FAISS** for efficient similarity search
 - 🤖 Uses OpenAI GPT (gpt-4o-mini) to generate answers
-- 📚 Cites the source chunk for every answer
-- 🌐 Deployable via **Streamlit** or **Gradio**
+- 🌐 Deployable via **Streamlit** 
 
 ---
 
@@ -72,7 +71,7 @@ Place PDFs inside data/papers/, then run:
 
 bash
 Copy code
-python preload_documents.py
+python preprocess.py
 Run the app
 
 bash
