@@ -16,6 +16,16 @@ This project is an AI-powered **Question Answering System** built using the **Re
 
 ---
 
+## 🧪 Example Usage
+Upload a research paper PDF or use preloaded documents, then ask questions like:
+
+❓ "What is the architecture of the RAG model?"
+❓ "What are the results of the ablation study?"
+
+You’ll get an answer like:
+
+✅ “The RAG model consists of a retriever and a generator [2].”
+
 ## 📁 Project Structure
 
 ```bash
@@ -68,13 +78,3 @@ Run the app
 bash
 Copy code
 streamlit run app.py
-
-🧪 Example Usage
-Upload a research paper PDF or use preloaded documents, then ask questions like:
-
-❓ "What is the architecture of the RAG model?"
-❓ "What are the results of the ablation study?"
-
-You’ll get an answer like:
-
-✅ “The RAG model consists of a retriever and a generator [2].”
