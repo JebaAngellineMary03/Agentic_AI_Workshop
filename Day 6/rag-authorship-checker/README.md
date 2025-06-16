@@ -76,5 +76,5 @@ GEMINI_API_KEY2 = "your-gemini-api-key-2"  # For abstract similarity scoring </p
 ![image](https://github.com/user-attachments/assets/e31d5840-1c68-4e65-a09b-838d094a6cf2)
 ---
 ![image](https://github.com/user-attachments/assets/3fe50171-e27c-462b-9e1a-005349f1b360)
-Example of section classification and similarity check
+<h3 align="center">Example of Section Classification and Similarity Check</h3>
 
