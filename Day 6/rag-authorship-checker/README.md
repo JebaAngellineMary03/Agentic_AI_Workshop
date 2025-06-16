@@ -38,45 +38,52 @@ Fetches similar papers using OpenAlex and evaluates how closely the uploaded pap
 
 ---
 
-## 📦 Installation & Setup
+## 📦 Installation
+Install required packages using pip:
 
-### 1️⃣ Install Dependencies
-
-```bash
+bash
+Copy
+Edit
 pip install streamlit pymupdf google-generativeai pandas requests
-2️⃣ Set Up API Keys
-You can either store the keys securely using .env or define them directly in your code:
+
+## 🔑 API Key Setup
+You can store your API keys securely using a .env file or directly in your code:
 
 python
 Copy
 Edit
 GEMINI_API_KEY1 = "your-gemini-api-key-1"  # For section-wise classification  
 GEMINI_API_KEY2 = "your-gemini-api-key-2"  # For abstract similarity scoring
-▶️ Running the App
+
+## ▶️ Running the App
 bash
 Copy
 Edit
 streamlit run app.py
-Replace app.py with your script filename if different.
+Replace app.py with your actual filename if different.
 
-🧪 How It Works
-Upload a research paper (PDF).
+## 🧪 How It Works
+1.Upload a research paper (PDF).
 
-Extracts metadata: Title, Authors, Abstract.
+2.**The app**:
 
-Fetches citation count via OpenAlex.
+-Extracts metadata: Title, Authors, Abstract
 
-Splits the content into logical sections.
+-Fetches citation count using OpenAlex
 
-Uses Gemini to analyze each section for AI authorship.
+-Splits the full text into logical sections
 
-Performs abstract similarity comparison using RAG (Gemini + OpenAlex).
+-Uses Gemini to classify each section as AI-generated or Human-written
 
-Displays a final similarity percentage and section-wise verdicts.
+-Uses RAG (Gemini + OpenAlex) to check abstract similarity with related works
 
-📸 Demo Screenshot
-![alt text](image-1.png)
-![alt text](image.png)
+3.**Displays**: 
+-Section-wise verdicts (✅ / ❌)
+-Final similarity percentage
 
+## 📸 Demo Screenshot
+![image](https://github.com/user-attachments/assets/e31d5840-1c68-4e65-a09b-838d094a6cf2)
+
+![image](https://github.com/user-attachments/assets/3fe50171-e27c-462b-9e1a-005349f1b360)
 Example of section classification and similarity check
 
