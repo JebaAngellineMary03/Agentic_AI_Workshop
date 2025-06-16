@@ -41,23 +41,17 @@ Fetches similar papers using OpenAlex and evaluates how closely the uploaded pap
 ## 📦 Installation
 Install required packages using pip:
 
-<pre> ```bash pip install streamlit pymupdf google-generativeai pandas requests ``` </pre>
+<pre> pip install streamlit pymupdf google-generativeai pandas requests </pre>
 
 ## 🔑 API Key Setup
 You can store your API keys securely using a .env file or directly in your code:
 
-python
-Copy
-Edit
-GEMINI_API_KEY1 = "your-gemini-api-key-1"  # For section-wise classification  
-GEMINI_API_KEY2 = "your-gemini-api-key-2"  # For abstract similarity scoring
+<pre>GEMINI_API_KEY1 = "your-gemini-api-key-1"  # For section-wise classification  
+GEMINI_API_KEY2 = "your-gemini-api-key-2"  # For abstract similarity scoring </pre>
 
 ## ▶️ Running the App
-bash
-Copy
-Edit
-streamlit run app.py
-Replace app.py with your actual filename if different.
+
+<pre>streamlit run app.py</pre>
 
 ## 🧪 How It Works
 1.Upload a research paper (PDF).
