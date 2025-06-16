@@ -41,10 +41,7 @@ Fetches similar papers using OpenAlex and evaluates how closely the uploaded pap
 ## 📦 Installation
 Install required packages using pip:
 
-bash
-Copy
-Edit
-pip install streamlit pymupdf google-generativeai pandas requests
+<pre> ```bash pip install streamlit pymupdf google-generativeai pandas requests ``` </pre>
 
 ## 🔑 API Key Setup
 You can store your API keys securely using a .env file or directly in your code:
@@ -83,7 +80,7 @@ Replace app.py with your actual filename if different.
 
 ## 📸 Demo Screenshot
 ![image](https://github.com/user-attachments/assets/e31d5840-1c68-4e65-a09b-838d094a6cf2)
-
+---
 ![image](https://github.com/user-attachments/assets/3fe50171-e27c-462b-9e1a-005349f1b360)
 Example of section classification and similarity check
 
