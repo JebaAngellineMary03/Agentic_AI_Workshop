@@ -35,40 +35,33 @@ Benchmarks:
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/pdf-research-agent.git
-cd pdf-research-agent
+<pre>git clone https://github.com/your-username/pdf-research-agent.git
+cd pdf-research-agent</pre>
 
-2. Create a Virtual Environment
-bash
-Copy
-Edit
-python3 -m venv .venv
-source .venv/bin/activate
-3. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Set Up Environment Variables
-Create a .env file in the root directory:
+## 2. Create a Virtual Environment
 
-env
-Copy
-Edit
-TAVILY_API_KEY=your_tavily_api_key_here
-Ensure llm_config.py contains a valid LLM configuration (Google Gemini, OpenAI, etc.) exposed as llm.
+<pre>python3 -m venv .venv
+source .venv/bin/activate</pre>
 
-▶️ Run the App
-bash
-Copy
-Edit
-streamlit run app.py
-📁 Project Structure
-bash
-Copy
-Edit
-.
+## 3. Install Dependencies
+
+<pre>pip install -r requirements.txt</pre>
+
+## 4. Set Up Environment Variables
+# Create a .env file in the root directory:
+
+<pre>TAVILY_API_KEY=your_tavily_api_key_here
+GEMINI_API_KEY=your_gemini_api_key_here</pre>
+
+## ▶️ Run the App
+
+<pre>streamlit run app.py</pre>
+
+---
+
+## 📁 Project Structure
+
+<pre>
 ├── app.py
 ├── llm_config.py
 ├── .env
@@ -81,12 +74,16 @@ Edit
 │   ├── pdf_utils.py
 │   └── parser_utils.py
 └── requirements.txt
-📌 Requirements
+</pre>
+
+---
+
+## 📌 Requirements
+
+<pre>
 Python 3.8+
-
 Streamlit
-
 Tavily SDK
-
 LangChain-compatible LLM (OpenAI, Gemini, etc.)
+</pre>
 
