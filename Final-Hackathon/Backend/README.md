@@ -26,12 +26,8 @@ This backend system powers a **Video Pitch Evaluation Platform** that analyzes Y
 
 ---
 
-## 🏗️ Project Structure
-
-<details>
-<summary>📁 Expand folder structure</summary>
-
-📦 Backend/
+## 📦 Backend Project structure/
+<pre>
 ├── agents/
 │ ├── init.py
 │ ├── clarity_agent.py
@@ -89,87 +85,52 @@ This backend system powers a **Video Pitch Evaluation Platform** that analyzes Y
 ├── main.py
 ├── requirements.txt
 └── .env
+</pre>
 
-yaml
-Copy
-Edit
+## 🔐Environment Variables
+<pre>MONGO_URI="mongodb://localhost:27017"
+GOOGLE_API_KEY="your_google_api_key_here" </pre>
 
-</details>
+## ⚙️ Setup Instructions
 
----
-
-## 🔐 Environment Variables
-
-Create a `.env` file in the root directory with the following:
-
-```env
-MONGO_URI="mongodb://localhost:27017"
-GOOGLE_API_KEY="your_google_api_key_here"
-⚙️ Setup Instructions
-Clone the repository
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/your-repo.git
+# Clone the repository
+<pre>git clone https://github.com/your-username/your-repo.git
 cd Backend
-Create a virtual environment
+</pre>
 
-bash
-Copy
-Edit
-python -m venv .venv
-source .venv/bin/activate
-Install dependencies
+# Create a virtual environment
+<pre>python -m venv .venv
+source .venv/bin/activate</pre>
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the server
+# Install dependencies
+<pre> pip install -r requirements.txt </pre>
 
-bash
-Copy
-Edit
-uvicorn main:app --reload
-Your API will now be available at: http://localhost:8000
+# Run the server
+<pre> python main.py 
+Your API will now be available at: http://localhost:8000 </pre>
 
-📬 Sample Request
-http
-Copy
-Edit
-POST /analyze HTTP/1.1
+## 📬 Sample Request
+
+<pre> POST /analyze HTTP/1.1
 Content-Type: application/json
 
 {
   "youtube_url": "https://www.youtube.com/watch?v=wJfjDyAmy7U"
 }
-🧠 Agent Workflow Overview
-Add your workflow image below:
+</pre>
 
-<!-- Replace with actual image path -->
+## 🧠 Agent Workflow Overview
+![agentsWorkflow drawio](https://github.com/user-attachments/assets/dafa519b-d624-43e1-84e0-67e9ad203c41)
 
-css
-Copy
-Edit
-[ Download Agent ]
-        ↓
-[ Transcript + Metadata ]
-        ↓
-[ Clarity ] [ Content ] [ Structure ]
-        ↓
-[ Final Report Agent ]
-📚 Tech Stack
-Python 3.9+
+## 📚 Tech Stack
 
-FastAPI
+# 1.Python 3.9+
+# 2.FastAPI
+# 3.LangGraph / LangChain
+# 4.MongoDB
+# 5.FAISS
+# 6.Gemini
+# 7.yt-dlp
 
-LangGraph / LangChain
 
-MongoDB
 
-FAISS
-
-OpenAI / Gemini
-
-yt-dlp
