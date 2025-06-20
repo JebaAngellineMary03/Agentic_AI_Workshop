@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# 🎥 Video Pitch Evaluation Portal – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend of the **Pitch Analysis AI Platform** built with **React** and **Tailwind CSS**. It enables users to:
 
-## Available Scripts
+- 📥 Submit YouTube video links for evaluation
+- 📊 View scores for **content**, **clarity**, **tone**, and **structure**
+- 📝 Read AI-generated feedback reports
+- 🔍 Explore detailed insights via an interactive UI
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌐 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://drive.google.com/file/d/1-1pwA76UE8VjBazDRZ5T3wXsfT9gFAa8/view?usp=sharing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📁 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<pre>Frontend/
+├── public/
+├── src/
+│ ├── api/
+│ │ └── api.js # Axios config and backend API calls
+│ ├── components/
+│ │ ├── ui/ # Reusable UI elements
+│ │ │ ├── button.jsx
+│ │ │ ├── card.jsx
+│ │ │ ├── input.jsx
+│ │ │ └── tabs.jsx
+│ │ └── VideoDashboard.jsx # Main dashboard for evaluations
+│ ├── App.js # App entry point with routing
+│ ├── index.js # ReactDOM render
+│ └── styles.css / index.css # Tailwind and global styles
+├── postcss.config.js
+├── tailwind.config.js
+├── package.json
+└── README.md
+</pre>
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **🎯 Dashboard:** Lists all evaluated video submissions.
+- **📨 Video Input Form:** Lets users submit YouTube URLs.
+- **📈 Coaching Popup:** Displays full feedback report and score breakdown in a modal.
+- **🧩 Modular Components:** Built using clean reusable UI components.
+- **🎨 Tailwind CSS:** Fast, responsive, and modern UI with a gradient background.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<pre>git clone https://github.com/yourusername/pitch-evaluation-frontend.git
+cd pitch-evaluation-frontend </pre>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2.**Install dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<pre>npm install</pre>
 
-## Learn More
+3. **Start the development server:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<pre>npm start
+Ensure backend is running on http://localhost:8000 </pre>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📦 Dependencies
+1.react
+2.axios
+3.react-markdown
+4.tailwindcss
+5.postcss
+6.autoprefixer
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
