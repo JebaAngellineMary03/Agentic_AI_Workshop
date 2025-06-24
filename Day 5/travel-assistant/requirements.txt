@@ -1,0 +1,6 @@
+streamlit
+langchain
+langchain-google-genai
+duckduckgo-search
+requests
+dotenv
