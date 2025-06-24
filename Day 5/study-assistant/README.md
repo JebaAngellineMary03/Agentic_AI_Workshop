@@ -61,7 +61,7 @@ cd study-assistant</pre>
 
 ## ✅ Sample Output
 
-# Summary:
+### Summary:
 
 Prompt Engineering is the design of prompts to control LLMs
 
@@ -69,7 +69,7 @@ Parameters like temperature and top-p affect output style
 
 Examples include summarization, Q&A, classification, reasoning
 
-# Quiz Question Example:
+### Quiz Question Example:
 
 Q: What is the purpose of low temperature in LLMs?
 a) Random results
