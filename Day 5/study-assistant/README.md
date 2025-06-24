@@ -30,47 +30,38 @@ Built using **LangChain**, **Gemini 1.5 Flash**, and **Streamlit** — no vector
 
 ## 📂 Folder Structure
 
-study-assistant/
+<pre> study-assistant/
 ├── app.py 
 ├── requirements.txt # Python dependencies
 └── README.md # Project documentation
-
-yaml
-Copy
-Edit
+</pre>
 
 ---
 
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repo
-```bash
-git clone https://github.com/your-username/study-assistant.git
-cd study-assistant
-2️⃣ Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3️⃣ Add Your Gemini API Key
-You can generate a key at makersuite.google.com
 
-Edit app.py or input it in the sidebar during runtime.
+<pre>git clone https://github.com/your-username/study-assistant.git
+cd study-assistant</pre>
 
-▶️ Run the App
-bash
-Copy
-Edit
-streamlit run app.py
-📸 Output Preview
-🔑 Sidebar input for your Gemini API Key
+### 2️⃣ Install Dependencies
 
-📄 Upload a course PDF
+<pre>pip install -r requirements.txt</pre>
 
-📝 Get a summary and MCQs directly in the browser
+### ▶️ Run the App
 
-✅ Sample Output
-Summary:
+<pre>streamlit run app.py</pre>
+
+## 📸 Output Preview
+<img width="1512" alt="Screenshot 2025-06-24 at 6 08 07 PM" src="https://github.com/user-attachments/assets/6835cbf1-afd9-4757-89f6-b83de71f66ae" />
+
+<img width="1512" alt="Screenshot 2025-06-24 at 6 08 15 PM" src="https://github.com/user-attachments/assets/5643e062-a323-4c2d-8381-101f2d92044c" />
+
+
+## ✅ Sample Output
+
+# Summary:
 
 Prompt Engineering is the design of prompts to control LLMs
 
@@ -78,7 +69,7 @@ Parameters like temperature and top-p affect output style
 
 Examples include summarization, Q&A, classification, reasoning
 
-Quiz Question Example:
+# Quiz Question Example:
 
 Q: What is the purpose of low temperature in LLMs?
 a) Random results
