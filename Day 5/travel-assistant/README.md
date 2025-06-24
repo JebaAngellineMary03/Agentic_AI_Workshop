@@ -32,64 +32,52 @@ This project is an interactive AI-based travel assistant built using **LangChain
 ## 📦 Installation
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/travel-assistant-ai.git
-   cd travel-assistant-ai
-Create a virtual environment (optional but recommended):
 
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate  # or venv\\Scripts\\activate on Windows
-Install dependencies:
+   <pre>git clone https://github.com/yourusername/travel-assistant-ai.git
+   cd travel-assistant-ai </pre>
 
-bash
-Copy code
-pip install -r requirements.txt
-Add your API keys:
+2. **Install dependencies**:
+
+<pre> pip install -r requirements.txt</pre>
+
+3. **Add your API keys**:
 
 Get a Gemini API Key from https://makersuite.google.com/app/apikey
 
-Get a WeatherAPI key from https://www.weatherapi.com
+Get a WeatherAPI key from https://www.weatherapi.com 
 
-🔑 Environment Setup
+## 🔑 Environment Setup
 Update your .env or Python script with:
 
-bash
-Copy code
-export GOOGLE_API_KEY="your_gemini_api_key"
-export WEATHER_API_KEY="your_weather_api_key"
-Or directly set them in your script like:
+<pre>export GOOGLE_API_KEY="your_gemini_api_key"
+export WEATHER_API_KEY="your_weather_api_key"</pre>
 
-python
-Copy code
-os.environ["GOOGLE_API_KEY"] = "your_key_here"
-▶️ Running the App
-bash
-Copy code
-streamlit run app.py
-Then open the browser link shown (usually http://localhost:8501).
+4. **▶️ Running the App**
+   
+<pre>streamlit run app.py
+Then open the browser link shown (usually http://localhost:8501).</pre>
 
-🧠 How It Works
+## 🧠 How It Works
+
 The user inputs a city name.
 
-The agent:
+### The agent:
 
-Calls a custom weather tool (via WeatherAPI)
+-Calls a custom weather tool (via WeatherAPI)
 
-Calls a DuckDuckGo-based search tool for attractions
+-Calls a DuckDuckGo-based search tool for attractions
 
-The Gemini LLM formats the results into a natural, readable, and often multilingual response
+-The Gemini LLM formats the results into a natural, readable, and often multilingual response
 
-The result is shown in the Streamlit UI.
+-The result is shown in the Streamlit UI.
 
-📷 Screenshot
-<!-- Add your screenshot path if available -->
+### 📷 Screenshot
+<img width="1512" alt="Screenshot 2025-06-24 at 7 07 06 PM" src="https://github.com/user-attachments/assets/52380f3f-ac75-4b77-8467-3f8db1b83ecf" />
 
-✨ Example Output
-csharp
-Copy code
-As of 2025-06-24 18:55, the weather in Coimbatore is Partly cloudy with a temperature of 28.3 °C (Feels like 32.0 °C).
+
+### ✨ Example Output
+
+<pre>As of 2025-06-24 18:55, the weather in Coimbatore is Partly cloudy with a temperature of 28.3 °C (Feels like 32.0 °C).
 
 Top Attractions:
 • 🛕 Marudamalai Temple  
@@ -101,4 +89,4 @@ Top Attractions:
 📍 [View on Google Maps](https://www.google.com/maps/place/Coimbatore)
 
 தமிழில்:
-கோயம்புத்தூர் ஒரு அழகான நகரமாகும். மருதமலை கோவில் மிகவும் பிரபலமானது.
+கோயம்புத்தூர் ஒரு அழகான நகரமாகும். மருதமலை கோவில் மிகவும் பிரபலமானது. </pre>
