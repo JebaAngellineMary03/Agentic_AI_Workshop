@@ -1,0 +1,8 @@
+langgraph
+streamlit
+openai
+gemini
+requests
+faiss-cpu
+python-dotenv
+sentence-transformers

@@ -1,10 +1,62 @@
-[
-  {
-    "title": "Effective Pitch Structure",
-    "content": "An ideal pitch contains: Introduction, Problem Statement, Proposed Solution, Value Proposition, Market Opportunity, Business Model, Call to Action."
-  },
-  {
-    "title": "Startup Pitch Best Practices",
-    "content": "Be clear and concise. Focus on the problem, how your solution helps, and what you want from the audience (investment, support, etc)."
-  }
-]
+{
+  "pitch_templates": [
+    {
+      "title": "Effective Pitch Structure",
+      "content": [
+        {
+          "section": "Introduction",
+          "details": "Brief introduction of the company, its mission, and its founders. Context for the pitch (e.g., the problem the startup is solving)."
+        },
+        {
+          "section": "Problem Statement",
+          "details": "Clear articulation of the problem or pain point. Explanation of why the problem matters and who is affected."
+        },
+        {
+          "section": "Proposed Solution",
+          "det ails": "Description of the product or service offering. How the solution addresses the problem effectively."
+        },
+        {
+          "section": "Value Proposition",
+          "details": "What makes the solution unique or valuable. Competitive advantage over existing solutions."
+        },
+        {
+          "section": "Market Opportunity",
+          "details": "Size of the target market and potential for growth. Explanation of why this market is attractive."
+        },
+        {
+          "section": "Business Model",
+          "details": "How the company plans to generate revenue. Pricing strategy, customer acquisition, and sales channels."
+        },
+        {
+          "section": "Call to Action",
+          "details": "What you want from the audience (e.g., investment, partnership). Next steps or actions you are asking the audience to take."
+        }
+      ]
+    },
+    {
+      "title": "Startup Pitch Best Practices",
+      "content": [
+        {
+          "section": "Clarity and Focus",
+          "details": "Keep the pitch clear and concise. Focus on the problem, the solution, and the value it creates."
+        },
+        {
+          "section": "Problem-Solution Fit",
+          "details": "Clearly demonstrate the pain point your solution addresses. Explain how your product or service uniquely solves this problem."
+        },
+        {
+          "section": "Market Validation",
+          "details": "Evidence of demand or traction (e.g., customer feedback, sales). Proof that there’s a real need for your product in the market."
+        },
+        {
+          "section": "Team and Execution",
+          "details": "Highlight the skills and experience of the founding team. Show why your team is the best one to execute on this idea."
+        },
+        {
+          "section": "Investment Ask",
+          "details": "Be clear about how much funding you’re seeking. Provide details on how the funding will be used and its impact on growth."
+        }
+      ]
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import os
 
 @tool
 def clarity_tone_analysis_tool(transcript: str, audio_path: str, audio_features: Dict) -> str:
-    """Analyze speech clarity and tone with audio processing"""
+    """Analyze speech clarity and tone with audio processing based on defined criteria"""
     try:
         from pydub import AudioSegment
         import librosa
@@ -41,6 +41,36 @@ def clarity_tone_analysis_tool(transcript: str, audio_path: str, audio_features:
         except:
             zcr_mean = spectral_centroid_mean = rms_mean = 0.0
 
+        # Define clarity and tone criteria based on extracted features
+        clarity_score = 100
+        tone_score = 100
+
+        # Clarity Criteria
+        if loudness < -30:
+            clarity_score -= 20  # Too low loudness
+        elif loudness > -5:
+            clarity_score -= 10  # Too high loudness
+        
+        if tempo > 150 or tempo < 90:
+            clarity_score -= 15  # Too fast or too slow tempo
+        
+        if pitch_mean < 80 or pitch_mean > 250:
+            clarity_score -= 15  # Pitch out of ideal range
+        
+        if pitch_std < 0.5:
+            clarity_score -= 10  # Low pitch variation
+        
+        # Tone Criteria
+        if pitch_mean < 100 or pitch_mean > 250:
+            tone_score -= 10  # Pitch too low or too high
+        
+        if spectral_centroid_mean < 1000 or spectral_centroid_mean > 3000:
+            tone_score -= 10  # Low or high spectral centroid
+        
+        if rms_mean < 0.02:
+            tone_score -= 15  # Low energy
+
+        # Generate the audio feature summary for feedback
         audio_feat_summary = f"""
         Duration: {duration_seconds:.2f} seconds
         Loudness: {loudness:.2f} dB
@@ -54,6 +84,7 @@ def clarity_tone_analysis_tool(transcript: str, audio_path: str, audio_features:
         Sample Rate: {audio_features.get('sample_rate', 'Unknown')} Hz
         """
 
+        # Create the prompt for LLM
         prompt = f"""
         Analyze the following transcript and audio features for:
         1. Clarity Score (0-100)
@@ -68,6 +99,7 @@ def clarity_tone_analysis_tool(transcript: str, audio_path: str, audio_features:
         {audio_feat_summary}
         """
 
+        # Invoke the LLM for final feedback
         response = llm.invoke(prompt)
         return response.content if hasattr(response, 'content') else str(response)
 

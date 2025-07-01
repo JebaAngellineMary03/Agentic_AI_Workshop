@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, START
 from state.state import PitchAnalysisState
-from agents.download_agent import download_agent,start_analysis
+from agents.download_agent import download_agent, start_analysis
 from agents.content_agent import content_agent
 from agents.clarity_agent import clarity_agent
 from agents.structure_agent import structure_agent
@@ -13,7 +13,7 @@ def create_pitch_analysis_graph():
     
     workflow = StateGraph(PitchAnalysisState)
     
-    # Add nodes
+    # Add nodes (agents)
     workflow.add_node("start", start_analysis)
     workflow.add_node("download_agent", download_agent)
     workflow.add_node("content_agent", content_agent)
@@ -22,14 +22,15 @@ def create_pitch_analysis_graph():
     workflow.add_node("feedback_agent", feedback_agent)
     workflow.add_node("error_handler", error_handler)
     
-    # Add edges
+    # Add edges 
     workflow.add_edge(START, "start")
-    workflow.add_conditional_edges("start", route_next_agent)
-    workflow.add_conditional_edges("download_agent", route_next_agent)
-    workflow.add_conditional_edges("content_agent", route_next_agent)
-    workflow.add_conditional_edges("clarity_agent", route_next_agent)
-    workflow.add_conditional_edges("structure_agent", route_next_agent)
-    workflow.add_conditional_edges("feedback_agent", route_next_agent)
+    workflow.add_edge("start", "download_agent")  
+    workflow.add_edge("download_agent", "content_agent")  
+    workflow.add_edge("content_agent", "clarity_agent")  
+    workflow.add_edge("clarity_agent", "structure_agent")  
+    workflow.add_edge("structure_agent", "feedback_agent")  
+    
+    # Error handler should be connected to all nodes to capture any errors
     workflow.add_conditional_edges("error_handler", route_next_agent)
     
     return workflow.compile()

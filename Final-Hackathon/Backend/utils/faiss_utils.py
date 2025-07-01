@@ -5,12 +5,31 @@ import json
 import os
 
 def create_faiss_index_from_json(json_path: str, api_key: str):
+    # Open and load the JSON file
     with open(json_path) as f:
         data = json.load(f)
         
-    docs = [Document(page_content=item['content'], metadata={"title": item['title']}) for item in data]
+    # Ensure data is in the expected format
+    if "pitch_templates" not in data:
+        raise ValueError("JSON file must contain a 'pitch_templates' key.")
+
+    # Extract pitch templates
+    pitch_templates = data["pitch_templates"]
+
+    # Create documents using the extracted pitch templates
+    docs = []
+    for item in pitch_templates:
+        # Safely concatenate the 'details' of each section to form a single string
+        content = " ".join([section.get('details', '') for section in item['content'] if 'details' in section])
+        
+        # Add the document to the docs list
+        docs.append(Document(page_content=content, metadata={"title": item['title']}))
+
+    # Use embeddings and FAISS to create the index
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=api_key)
     return FAISS.from_documents(docs, embeddings)
+
+
 
 def get_faiss_retriever():
     return FAISS.load_local(
