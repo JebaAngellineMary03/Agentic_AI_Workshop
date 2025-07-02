@@ -1,12 +1,12 @@
 from langchain_core.tools import tool
-from llms.llms import llm
 from prompts.prompt_templates import final_report_prompt
 import json
 import re
 from typing import Dict
+from llms.llms import llm
 
 @tool
-def generate_final_report_tool(content_analysis: str, clarity_tone_analysis: str, structure_analysis: Dict) -> Dict:
+def generate_final_report_tool(content_analysis: str, clarity_tone_analysis: str, structure_analysis: str) -> Dict:
     """Generate comprehensive feedback report from all agent analyses"""
     try:
         def extract_score(text: str, keywords: list[str]) -> int:
@@ -19,19 +19,22 @@ def generate_final_report_tool(content_analysis: str, clarity_tone_analysis: str
                         continue
             return 50
 
-        content_score = extract_score(str(content_analysis), ["structure", "relevance", "content", "score"])
-        clarity_score = extract_score(str(clarity_tone_analysis), ["clarity"])
-        tone_score = extract_score(str(clarity_tone_analysis), ["tone"])
-        flow_score = structure_analysis.get("flow_score", 50)
+        # Extracting scores from the analysis texts
+        content_score = extract_score(content_analysis, ["structure", "relevance", "content", "score"])
+        clarity_score = extract_score(clarity_tone_analysis, ["clarity"])
+        tone_score = extract_score(clarity_tone_analysis, ["tone"])
+        flow_score = extract_score(structure_analysis, ["flow"])
 
         overall_score = round((content_score + clarity_score + tone_score + flow_score) / 4)
 
+        # Generate the final report using a prompt template
         prompt = final_report_prompt.format(
             content_analysis=content_analysis,
             clarity_analysis=clarity_tone_analysis,
             structure_analysis=json.dumps(structure_analysis, indent=2)
         )
 
+        # Invoke the LLM with the prompt to get the final report text
         response = llm.invoke(prompt)
         report_text = response.content if hasattr(response, 'content') else str(response)
 

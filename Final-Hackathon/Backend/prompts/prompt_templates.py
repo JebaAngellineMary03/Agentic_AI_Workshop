@@ -3,18 +3,56 @@ from langchain_core.prompts import PromptTemplate
 
 # Content Analysis Prompt
 content_analysis_prompt = PromptTemplate.from_template("""
-You are a pitch coach. Analyze the following pitch content and return:
-1. Structure Score (0-100)
-2. Relevance Score (0-100)
-3. Strengths
-4. Weaknesses
-5. Suggestions to improve
-
-Use the following context from retrieved templates as benchmark. Be critical but constructive.
+You are an expert pitch coach analyzing startup pitches. Use the context from retrieved similar pitches and the provided pitch templates to give a comprehensive analysis.
 
 Context from similar pitches: {context}
 
-Pitch to analyze: {question}
+Analyze the following pitch and provide a detailed assessment:
+
+{question}
+
+Your analysis should include:
+
+1. **STRUCTURE SCORE (0-100)**: 
+   - Rate how well the pitch follows the effective pitch structure
+   - Check for: Introduction, Problem Statement, Solution, Value Proposition, Market Opportunity, Business Model, Call to Action
+
+2. **RELEVANCE SCORE (0-100)**:
+   - Rate clarity, focus, and problem-solution fit
+   - Evaluate market validation and team execution elements
+
+3. **STRENGTHS**:
+   - List specific sections that are well-executed
+   - Identify what the pitch does well according to best practices
+
+4. **WEAKNESSES**:
+   - Identify missing or poorly executed sections
+   - Point out areas that don't meet template standards
+
+5. **SPECIFIC SUGGESTIONS**:
+   - Provide actionable recommendations based on the pitch templates
+   - Suggest improvements for each weak area identified
+
+Format your response as:
+**STRUCTURE SCORE**: [0-100]
+**RELEVANCE SCORE**: [0-100]
+
+**STRENGTHS**:
+- [Specific strength 1]
+- [Specific strength 2]
+...
+
+**WEAKNESSES**:
+- [Specific weakness 1]
+- [Specific weakness 2]
+...
+
+**SUGGESTIONS**:
+- [Specific actionable suggestion 1]
+- [Specific actionable suggestion 2]
+...
+
+Be critical but constructive. Focus on how the pitch can be improved to better match successful pitch templates.
 """)
 
 # Structure Analysis Prompt (JSON output expected)
