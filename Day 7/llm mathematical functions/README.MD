@@ -6,7 +6,7 @@ A **LangGraph-powered multi-tool agent** built with **Streamlit UI** that handle
 
 ## 📁 Project Structure
 
-langgraph-agent/
+<pre>langgraph-agent/
 │
 ├── agents/
 │ └── math_general_agent.py # LangGraph agent and workflow definition
@@ -21,10 +21,7 @@ langgraph-agent/
 ├── main.py # Streamlit UI for interacting with the agent
 ├── requirements.txt # Python dependencies
 └── README.md # You're reading it!
-
-yaml
-Copy
-Edit
+</pre>
 
 ---
 
@@ -40,47 +37,41 @@ Edit
 
 ## 📸 Demo Screenshots
 
-### Math Workflow  
-![Math Flow](screenshots/Screenshot%202025-07-26%20232919.png)
-
 ### LLM Response Workflow  
-![LLM Flow](screenshots/Screenshot%202025-07-26%20233026.png)
+![LLM Flow](screenshots/Screenshot%202025-07-26%20232919.png)
+
+### Math Workflow  
+![Math Flow](screenshots/Screenshot%202025-07-26%20233026.png)
 
 ---
 
 ## 🛠️ Setup Instructions
 
 ### 1. Clone the Repo
+<pre>git clone https://github.com/your-username/langgraph-agent.git
+cd langgraph-agent</pre>
 
-```bash
-git clone https://github.com/your-username/langgraph-agent.git
-cd langgraph-agent
-2. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3. Add Environment Variables
-Create a .env file in the root directory with your Gemini or Google API key:
 
-env
-Copy
-Edit
-GEMINI_API_KEY=your_api_key_here
-4. Run the App
-bash
-Copy
-Edit
-streamlit run main.py
-✍️ Example Prompts
-Input	Agent Action
+### 2. Install Dependencies
+<pre>pip install -r requirements.txt</pre>
+
+### 3. Add Environment Variables
+<pre>Create a .env file in the root directory with your Gemini or Google API key:
+GEMINI_API_KEY=your_api_key_here</pre>
+
+### 4. Run the App
+<pre>streamlit run main.py</pre>
+
+## ✍️ Example Prompts
+
+<pre>Input	Agent Action
 What is 7 times 8?	Uses multiply tool
 What is 15 + 7?	Uses plus tool
 Tell me about Python	Routes to Gemini LLM
-What is 5 plus?	Returns clarification
+What is 5 plus?	Returns clarification </pre>
 
-📦 Requirements
-Python 3.10+
+### 📦 Requirements
+<pre>Python 3.10+
 
 Streamlit
 
@@ -88,5 +79,5 @@ LangGraph
 
 Google Generative AI SDK
 
-python-dotenv
+python-dotenv</pre>
 
