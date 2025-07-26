@@ -24,27 +24,27 @@ This Streamlit-based AI agent helps you analyze the **clothing store market** in
 
 ## 📦 Setup Instructions
 
-<pre> ###1. Clone the Repository
+<pre> 1. Clone the Repository
 
 git clone https://github.com/yourusername/clothing-store-agent.git
 cd clothing-store-agent
 
-### 2. Create a Virtual Environment
+2. Create a Virtual Environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-### 3. Install Dependencies
+3. Install Dependencies
 
 pip install -r requirements.txt
 
-### 4. Add Your API Keys (Optional)
+4. Add Your API Keys (Optional)
 If your agent requires access to external data like Google Places or SerpAPI, create a .env file:
 
 .env
 SERPAPI_API_KEY=your_serp_api_key
 GOOGLE_PLACES_API_KEY=your_google_places_key
 
-### 5. Run the App
+5. Run the App
 
 streamlit run app.py</pre>
 
