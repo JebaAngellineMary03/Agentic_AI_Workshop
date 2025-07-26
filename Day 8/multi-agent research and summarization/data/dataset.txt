@@ -1,0 +1,9 @@
+Artificial intelligence is the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions.
+
+Machine learning is a subset of AI that allows systems to learn and improve from experience without being explicitly programmed.
+
+Deep learning, a branch of machine learning, uses neural networks with many layers to analyze complex patterns.
+
+LangGraph is a framework that enables developers to create LLM-based workflows using state graphs.
+
+Gemini by Google is a family of multimodal large language models capable of understanding text, code, images, and more.
