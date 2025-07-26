@@ -24,22 +24,22 @@ A multi-agent app that intelligently chooses the best route—RAG, Web Search, o
 **Query:** `What is deep learning?`  
 If your FAISS index contains relevant content, the RAG agent provides a precise answer.
 
-![RAG Test Case](screenshots/Screenshot%202025-07-27%20004818.png)
+![RAG Test Case](screenshots/Screenshot%202025-07-27%20003321.png)
 
 ---
 
 ### 2. 🤖 LLM Route – Direct LLM Response
 
-**Query:** `Explain quantum entanglement in simple terms`  
+**Query:** `What are the main components of a RAG model and how do they interact?`  
 If no relevant documents exist, it falls back to Gemini Pro LLM.
 
-![LLM Test Case](screenshots/Screenshot%202025-07-27%20003321.png)
+![LLM Test Case](screenshots/Screenshot%202025-07-27%20004818.png)
 
 ---
 
 ### 3. 🌐 Web Search Route – Real-time Retrieval
 
-**Query:** `Latest trends in generative AI in 2025`  
+**Query:** `What are the latest breakthroughs in quantum computing as of 2025?`  
 No RAG matches, so the system performs a web search and summarizes the results.
 
 ![Web Research Test Case](screenshots/Screenshot%202025-07-27%20004924.png)
@@ -60,7 +60,7 @@ No RAG matches, so the system performs a web search and summarizes the results.
 
 ## 📂 Folder Structure
 
-.
+<pre>
 ├── agents/
 │ ├── rag_agent.py
 │ ├── llm_agent.py
@@ -73,39 +73,20 @@ No RAG matches, so the system performs a web search and summarizes the results.
 ├── .env
 ├── main.py
 ├── README.md
+</pre>
 
 
 ---
 
 ## 🔧 Environment Setup
 
-1. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-Set environment variables
-Create a .env file:
+### 1.Install dependencies
+<pre>pip install -r requirements.txt</pre>
 
-ini
-Copy
-Edit
-GEMINI_API_KEY=your_google_gemini_key
-SERPAPI_KEY=your_serpapi_key
-Build FAISS index (optional, if not already done)
+### 2.Set environment variablesCreate a .env file in the root directory with the following:
 
-python
-Copy
-Edit
-from langchain.vectorstores import FAISS
-# Your FAISS creation code here
-Run the app
+.env
+<pre>GEMINI_API_KEY=your_google_gemini_key</pre>
 
-bash
-Copy
-Edit
-python main.py
-🧠 Sample Queries to Try
-"What is diffusion in AI?"
-
-"Trends in LLM-based search engines in 2025"
-
-"Applications of deep learning in education"
+### 3.Run the app
+<pre>python main.py</pre>
