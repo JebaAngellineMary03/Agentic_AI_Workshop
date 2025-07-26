@@ -1,54 +1,59 @@
-# 🧠 Competitor Search Agent with Gemini 1.5 Flash + LangChain
+# 🛍️ Bangalore Clothing Store Market Agent
 
-This project uses **LangChain Agents** powered by **Google Gemini 1.5 Flash** to search for clothing competitors and analyze footfall trends in a given location.
-
-> ⚡ **Gemini 1.5 Flash** provides blazing-fast, cost-effective reasoning—ideal for real-time AI agents.
+This Streamlit-based AI agent helps you analyze the **clothing store market** in various areas of **Bangalore** (or any other location). It provides business insights, competitor search, and market analysis using real-time data and LLMs.
 
 ---
 
 ## 🚀 Features
 
-- ✅ **Gemini 1.5 Flash LLM** via Google Generative AI API  
-- ✅ **LangChain Agent** with `ZERO_SHOT_REACT_DESCRIPTION`  
-- ✅ **Custom Tool**: `SearchCompetitors`  
-- ✅ `.env` support for secure API key management  
-- ✅ Error handling and limited iteration control via `max_iterations=5`
+- 🔍 **Search Competitors** in a specific location
+- 📊 **Generate Market Analysis** for a given business type
+- 🧠 **Get Location Insights** to understand business density and trends
+- 🧵 Uses an LLM-backed agent for natural query processing
+- ✨ Enhanced UI with clean layout, icons, and responsive elements
 
 ---
 
-## 📁 Folder Structure
-<pre>
-├── main.py # LangChain agent logic
-├── tools.py # Custom tools like search_competitors
-├── .env # API key (excluded from Git)
-├── requirements.txt # Python dependencies
-└── README.md # This file
-</pre>
+## 🖥️ UI Screenshots
 
-## 🛠️ Installation & Setup
+| 📥 Input Form | 📋 Output Display |
+|--------------|------------------|
+| ![Form](screenshots/image.png) | ![Output](screenshots/Screenshot%202025-07-26%20224228.png) | 
+ |![Output](screenshots/Screenshot%202025-07-26%20224255.png) |
 
-<pre># 1. Clone the repository
-git clone https://github.com/yourname/competitor-agent.git
-cd competitor-agent
+---
 
-# 2. Install dependencies
+## 📦 Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/clothing-store-agent.git
+cd clothing-store-agent
+2. Create a Virtual Environment
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. Install Dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
+4. Add Your API Keys (Optional)
+If your agent requires access to external data like Google Places or SerpAPI, create a .env file:
 
-# 3. Add your API key to a .env file
-echo "GEMINI_API_KEY=your-google-api-key" > .env
-
-# 4. Run the agent
-python main.py</pre>
-
-# 🧪 Example Prompt
-### Prompt:
-<pre> Can you find the top clothing competitors and footfall trends in Coimbatore? 
-
-Agent Response:
-> Entering new AgentExecutor chain...
-Thought: I need to use the SearchCompetitors tool.
-Action: SearchCompetitors
-Action Input: "Coimbatore"
-Observation: Top 3 competitors in Coimbatore: Reliance Trends, Pantaloons, Max Fashion. Footfall highest during weekends.
-Final Answer: The top clothing competitors in Coimbatore are Reliance Trends, Pantaloons, and Max Fashion. </pre>
+env
+Copy
+Edit
+SERPAPI_API_KEY=your_serp_api_key
+GOOGLE_PLACES_API_KEY=your_google_places_key
+5. Run the App
+bash
+Copy
+Edit
+streamlit run app.py
+🧠 How It Works
+The app uses a build_agent() function that wraps a LangGraph or Gemini-powered agent. This agent interprets business questions and executes structured prompts to extract relevant insights.
 
