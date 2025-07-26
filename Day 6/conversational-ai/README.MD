@@ -17,20 +17,15 @@ This project uses **LangChain Agents** powered by **Google Gemini 1.5 Flash** to
 ---
 
 ## 📁 Folder Structure
-
-.
 ├── main.py # LangChain agent logic
 ├── tools.py # Custom tools like search_competitors
 ├── .env # API key (excluded from Git)
 ├── requirements.txt # Python dependencies
 └── README.md # This file
 
----
-
 ## 🛠️ Installation & Setup
 
-```bash
-# 1. Clone the repository
+<pre># 1. Clone the repository
 git clone https://github.com/yourname/competitor-agent.git
 cd competitor-agent
 
@@ -41,28 +36,17 @@ pip install -r requirements.txt
 echo "GEMINI_API_KEY=your-google-api-key" > .env
 
 # 4. Run the agent
-python main.py
-🧪 Example Prompt
-Prompt:
+python main.py</pre>
 
-Can you find the top clothing competitors and footfall trends in Coimbatore?
+# 🧪 Example Prompt
+### Prompt:
+<pre> Can you find the top clothing competitors and footfall trends in Coimbatore? 
 
 Agent Response:
-
 > Entering new AgentExecutor chain...
 Thought: I need to use the SearchCompetitors tool.
 Action: SearchCompetitors
 Action Input: "Coimbatore"
 Observation: Top 3 competitors in Coimbatore: Reliance Trends, Pantaloons, Max Fashion. Footfall highest during weekends.
-Final Answer: The top clothing competitors in Coimbatore are Reliance Trends, Pantaloons, and Max Fashion. Weekend footfall is highest.
-🖼️ Screenshots
-💡 Replace the image paths with your actual screenshots (from terminal or UI output).
+Final Answer: The top clothing competitors in Coimbatore are Reliance Trends, Pantaloons, and Max Fashion. </pre>
 
-✅ Agent Thought Process
-
-🔧 Custom Tool Output
-
-📦 requirements.txt
-langchain
-langchain-google-genai
-python-dotenv
