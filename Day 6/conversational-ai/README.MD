@@ -17,11 +17,13 @@ This project uses **LangChain Agents** powered by **Google Gemini 1.5 Flash** to
 ---
 
 ## 📁 Folder Structure
+<pre>
 ├── main.py # LangChain agent logic
 ├── tools.py # Custom tools like search_competitors
 ├── .env # API key (excluded from Git)
 ├── requirements.txt # Python dependencies
 └── README.md # This file
+</pre>
 
 ## 🛠️ Installation & Setup
 
