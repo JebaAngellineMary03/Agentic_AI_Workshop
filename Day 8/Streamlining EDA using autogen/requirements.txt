@@ -1,0 +1,7 @@
+streamlit
+autogen
+pandas
+matplotlib
+seaborn
+google-generativeai
+scikit-learn 
